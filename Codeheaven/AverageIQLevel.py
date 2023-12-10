@@ -28,25 +28,13 @@ df = pd.read_csv(r'C:\Users\aciftcioglu\Downloads\AI\datasets\IQ_level.csv')
 #note: df.corr() functon for corrolation matrix is only works for numeric values
 
 #correlation matrix
-correlation_matrix = df.select_dtypes(include =[np.number]).corr()
+#correlation_matrix = df.select_dtypes(include =[np.number]).corr()
 
 #visualization of correlation matrix
-sns.heatmap(correlation_matrix, annot = True, cmap='coolwarm')
-plt.title('Correlation Matrix')
-plt.show()
+#sns.heatmap(correlation_matrix, annot = True, cmap='coolwarm')
+#plt.title('Correlation Matrix')
+#plt.show()
 #print(df.corr())
-
-worldIqAvg = df['IQ'].mean()
-
-for i in df['country'].unique():
-    if i == 'Turkey':
-        turkey_avg_iq = df[df['country'] == 'Turkey']['IQ'].mean()
-        if turkey_avg_iq > worldIqAvg:
-            print('Turkey is smarter than the world avg')
-
-
-
-
 
 
 
